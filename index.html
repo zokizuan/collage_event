@@ -81,10 +81,10 @@
     // add popup function to every button
     const buttons = document.querySelectorAll(".button-56");
     buttons.forEach((button)=>{
-        button.addEventListener("click", popupFn)
+        button.addEventListener("click", scroll)
     })
   });
-    function popupFn() {
+    function scroll() {
       // scroll to bottom
       window.scrollTo(0, document.body.scrollHeight);
     }
