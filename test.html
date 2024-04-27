@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/test.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="timeline">
+
+    <div class="container left">
+      <div class="date">9:00 AM - 10:00 AM</div>
+      <i class="icon fa fa-id-badge"></i>
+      <button class="button-56" role="button">Registration</button>
+    </div>
+    <div class="container right">
+      <div class="date">10:00 AM - 10:30 AM</div>
+      <i class="icon fa fa-coffee"></i>
+      <button class="button-56" role="button">Tea</button>
+    </div>
+    <div class="container left">
+      <div class="date">10:30 AM - 01:00 PM</div>
+      <i class="icon fa fa-ribbon"></i>
+            <button class="button-56" role="button">Tea</button>
+
+      
+    </div>
+    <div class="container right">
+      <div class="date">01:00 PM - 02:00 PM </div>
+      <i class="icon fa fa-utensils"></i>
+            <button class="button-56" role="button">Lunch</button>
+
+      
+    </div>
+    <div class="container left">
+      <div class="date">02:00 PM - 04:00 PM </div>
+      <i class="icon fa fa-comments"></i>
+            <button class="button-56" role="button">Panel Discussion</button>
+
+      
+    </div>
+    <div class="container right">
+      <div class="date">04:00 PM - 04:30 PM </div>
+      <i class="icon fa fa-mug-hot"></i>
+            <button class="button-56" role="button">High Tea</button>
+
+      
+    </div>
+    <div class="container left">
+      <div class="date">04:30 PM - 05:30 PM </div>
+      <i class="icon fa fa-theater-masks"></i>
+            <button class="button-56" role="button">Cultural Program</button>
+
+      
+    </div>
+      
+    </div>
+  </div>
+  <div>
+    
+  </div>
+
+  <div>
+    <h1 style="text-align: center;">
+      Location
+    </h1>
+    <div style="display: flex; justify-content: center; padding: 16px;">    
+      <img width="100%" src="./map.png" alt="">
+    </div>
+  </div>
+<div id="overlay"></div>
+<div id="popupDialog">
+  
+  <img src="./map.webp" alt="">
+    <button onclick="closeFn()">
+        Close
+    </button>
+</div>
+<script>
+  window.addEventListener("load", ()=>{
+    // add popup function to every button
+    const buttons = document.querySelectorAll(".button-56");
+    buttons.forEach((button)=>{
+        button.addEventListener("click", popupFn)
+    })
+  });
+    function popupFn() {
+      // scroll to bottom
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+</script>
+</body>
+</html>
