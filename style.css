@@ -151,9 +151,13 @@ body {
 
 @media (max-width: 767.98px) {
   .timeline::after {
-    left: 90px;
+    left: 97.5px;
   }
-
+  .button-56 {
+    font-size: 15px !important;
+  justify-content: start !important;
+    
+  }
   .container {
     width: 100%;
     padding-left: 120px;
@@ -166,7 +170,7 @@ body {
 
   .container.left::after,
   .container.right::after {
-    left: 82px;
+    left: 90px;
   }
 
   .container.left::before,
@@ -179,7 +183,7 @@ body {
   .container.right .date {
     right: auto;
     left: 8px;
-    width: 82px;
+    width: 80px;
     /* Adjust this width based on your content length */
     white-space: normal;
     /* Allows natural text wrapping */
@@ -188,7 +192,7 @@ body {
   .container.left .icon,
   .container.right .icon {
     right: auto;
-    left: 146px;
+    left: 132px;
   }
 
   .container.left .content,
@@ -206,6 +210,7 @@ body {
   border: 2px solid #e1663f;
   border-radius: 8px;
   box-sizing: border-box;
+  padding-left: 64px;
   color: #29386d;
   font-weight: 600;
   cursor: pointer;
@@ -256,6 +261,7 @@ body {
 @media (min-width: 768px) {
   .button-56 {
     width: 100%;
+    
   }
 }
 

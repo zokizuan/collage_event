@@ -27,7 +27,7 @@
     <div class="container left">
       <div class="date">10:30 AM - 01:00 PM</div>
       <i class="icon fa fa-ribbon"></i>
-            <button class="button-56" role="button">Tea</button>
+            <button class="button-56" role="button">Inauguration Session</button>
 
       
     </div>
@@ -72,7 +72,7 @@
     </h1>
     <div style="display: flex; justify-content: center; padding: 16px;">    
       
-  <img style="max-width: 1140px;" src="https://ik.imagekit.io/hamza/collegemap_AK1Lk16EX.png?updatedAt=1714215480279" alt="">
+  <img style="max-width: 1140px; width: 100%;" src="https://ik.imagekit.io/hamza/collegemap_AK1Lk16EX.png?updatedAt=1714215480279" alt="">
     </div>
   </div>  
 </div>
@@ -82,12 +82,26 @@
     const buttons = document.querySelectorAll(".button-56");
     buttons.forEach((button)=>{
         button.addEventListener("click", scroll)
-    })
+      })
+      updateDateDisplay();
+  window.addEventListener('resize', updateDateDisplay);
   });
     function scroll() {
       // scroll to bottom
       window.scrollTo(0, document.body.scrollHeight);
+      
     }
+    function updateDateDisplay() {
+    const dateElements = document.querySelectorAll('.date');
+    if (window.innerWidth <= 768) {
+      dateElements.forEach(date => {
+        date.textContent = date.textContent.replace(' - ', ' '); // Removes the dash
+      });
+    } else {
+      // If needed, restore the original format when the viewport is wider than 768px
+      // This requires storing the original text or having a rule to reformat it correctly
+    }
+  }
 </script>
 </body>
 </html>
